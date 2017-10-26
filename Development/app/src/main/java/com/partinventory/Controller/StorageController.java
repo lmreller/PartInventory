@@ -152,13 +152,14 @@ public class StorageController extends SQLiteOpenHelper{
     // to you to create adapters for your views.
 
     public void addItem(Item item){
+        Log.d("Asd", "Start");
         String id = Integer.toString(item.getId());
         String name = item.getName();
         String desc = item.getDescription();
         String year = Integer.toString(item.getYear());
-        Log.d("A", "Before");
+        Log.d("Asd", "Before");
         String sql = "INSERT INTO PartsInInventory(pid, name, description, year) VALUES("+id+", "+name+", "+desc+", "+year+")";
-        Log.d("B", "After");
+        Log.d("Asd", "After");
         myDataBase.execSQL(sql);
     }
 

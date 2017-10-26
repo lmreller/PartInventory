@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.d("Asd", "Item");
         Item test = new Item("A", "A", 1);
         StorageController cont = new StorageController(this);
         try {
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
             Log.d("CATCH", "Broken");
         }
+        Log.d("Asd", "Pre");
         cont.addItem(test);
 //        cont.getInventory();
     }
