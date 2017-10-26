@@ -12,11 +12,10 @@ public class Item {
     private int year;
     private float price = 0;
 
-    public Item(String Part_Name, String Part_Desc, int Part_Year, float Sell_Price){
+    public Item(String Part_Name, String Part_Desc, int Part_Year){
         name = Part_Name;
         description = Part_Desc;
         year = Part_Year;
-        price = Sell_Price;
     }
 
     private void genID(int id){
