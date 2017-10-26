@@ -1,7 +1,9 @@
-package com.partinventory;
+package com.partinventory.View;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.partinventory.R;
 
 public class MainActivity extends AppCompatActivity {
 
