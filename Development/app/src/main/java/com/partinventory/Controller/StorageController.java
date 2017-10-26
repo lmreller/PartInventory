@@ -123,7 +123,7 @@ public class StorageController extends SQLiteOpenHelper{
 
         //Open the database
         String myPath = DB_PATH + DB_NAME;
-        myDataBase = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READONLY);
+        myDataBase = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READWRITE);
 
     }
 
@@ -158,9 +158,14 @@ public class StorageController extends SQLiteOpenHelper{
         String desc = item.getDescription();
         String year = Integer.toString(item.getYear());
         Log.d("Asd", "Before");
-        String sql = "INSERT INTO PartsInInventory(pid, name, description, year) VALUES("+id+", "+name+", "+desc+", "+year+")";
+        String sql = "INSERT or REPLACE INTO PartsInInventory(pid, name, description, year) VALUES("+id+", "+name+", "+desc+", "+year+")";
         Log.d("Asd", "After");
-        myDataBase.execSQL(sql);
+        try {
+            myDataBase.execSQL(sql);
+        }
+        catch(Exception e){
+            Log.d("Asd", e.toString());
+        }
     }
 
     public void sellItem(){

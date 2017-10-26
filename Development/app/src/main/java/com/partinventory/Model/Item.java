@@ -13,6 +13,7 @@ public class Item {
     private float price = 0;
 
     public Item(String Part_Name, String Part_Desc, int Part_Year){
+        id = 0;
         name = Part_Name;
         description = Part_Desc;
         year = Part_Year;
