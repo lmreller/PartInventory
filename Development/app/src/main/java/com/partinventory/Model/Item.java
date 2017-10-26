@@ -12,6 +12,23 @@ public class Item {
     private int quantity;
     private float price = 0;
 
+    public Item(){
+
+    }
+
+    private void genID(){
+
+    }
+
+    public boolean deleteItem(){
+        return false;
+    }
+
+    public boolean sellItem(){
+        return false;
+    }
+
+    //GETTERS
     public int getId() {
         return id;
     }
