@@ -13,7 +13,7 @@ public class Item {
     private float price = 0;
 
     public Item(){
-
+        
     }
 
     private void genID(){
