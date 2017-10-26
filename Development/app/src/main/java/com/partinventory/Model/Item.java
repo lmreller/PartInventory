@@ -5,4 +5,34 @@ package com.partinventory.Model;
  */
 
 public class Item {
+    private int id;
+    private String name;
+    private String description;
+    private int year;
+    private int quantity;
+    private float price = 0;
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public float getPrice() {
+        return price;
+    }
 }
